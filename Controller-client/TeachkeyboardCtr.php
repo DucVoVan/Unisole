@@ -26,6 +26,7 @@
 		if(!mysqli_query( $conn, $sql )){
 			echo mysqli_error($conn);
 		}else{
+			$_SESSION['keyboard']=true;
 			echo "Hoàn thành!";
 		}
 	}

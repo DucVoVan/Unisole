@@ -69,7 +69,7 @@ td, th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
-  width: 13%;
+  /*width: 13%;*/
 }
 th{
   font-weight: 400;

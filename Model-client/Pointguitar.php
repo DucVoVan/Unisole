@@ -1,12 +1,12 @@
 <?php 
 	require_once('UserDB.php');
-	class PointMusic extends UserDB{
+	class PointGuitar extends UserDB{
 		private $accountid;
 		function __construct($accountid){
 			$this->accountid = $accountid;
 		}
-		function getPointmusic(){
-			$sql = 'SELECT * FROM `point-music` WHERE accountid = "'.$this->accountid.'"' ;
+		function getPointguitar(){
+			$sql = 'SELECT * FROM `point-guitar` WHERE accountid = "'.$this->accountid.'"' ;
 			$conn = $this->connect();
 			$result = mysqli_query($conn, $sql);
 			$row = mysqli_fetch_assoc($result);
@@ -81,43 +81,21 @@
 					"22-3" => $row['22-3'],
 					"23-1" => $row['23-1'],
 					"23-2" => $row['23-2'],
-					"23-3" => $row['23-3'],
-					"24-1" => $row['24-1'],
-					"24-2" => $row['24-2'],
-					"24-3" => $row['24-3'],
-					"25-1" => $row['25-1'],
-					"25-2" => $row['25-2'],
-					"25-3" => $row['25-3'],
-					"26-1" => $row['26-1'],
-					"26-2" => $row['26-2'],
-					"26-3" => $row['26-3'],
-					"27-1" => $row['27-1'],
-					"27-2" => $row['27-2'],
-					"27-3" => $row['27-3'],
-					"28-1" => $row['28-1'],
-					"28-2" => $row['28-2'],
-					"28-3" => $row['28-3'],
-					"29-1" => $row['29-1'],
-					"29-2" => $row['29-2'],
-					"29-3" => $row['29-3'],
-					"30-1" => $row['30-1'],
-					"30-2" => $row['30-2'],
-					"30-3" => $row['30-3'],
-					"31-1" => $row['31-1'],
-					"31-2" => $row['31-2'],
-					"31-3" => $row['31-3']
+					"23-3" => $row['23-3']
 				);
 				return $arr;
+				// echo "ok";
 			}else{
+				// echo mysqli_error($conn);
 				return $arr_empty;
 			}
 		}
 	}
-	if($_SESSION['music']==true){ // Kiểm tra xem người dùng đã làm bảng đánh giá chưa
-        // Làm rồi thì hiển thị bảng điểm nếu có và trang cá nhân
-        $pm = new PointMusic($_SESSION['id']);
-        $arr_music = $pm->getPointmusic();
+	if($_SESSION['guitar']==true){
+        $pg = new PointGuitar($_SESSION['id']);
+        $arr_guitar = $pg->getPointguitar();
         
-        $arr_details_music = array('','Dung tích phổi','Áp suất hơi','Độ ổn định của áp suất hơi','Quãng giọng (Range)','Kỹ thuật ngân rung','Mức thoải mái của cổ với note cao','Khả năng điều chỉnh hơi lên mũi','Khả năng điều chỉnh hơi xuống miệng','Phát âm','Điều chỉnh khoảng vang miệng','Điều chỉnh khoảng vang mũi','Âm sắc quãng trầm','Âm sắc quãng trung','Âm sắc quãng cao','Vị trí âm thanh','Cảm âm giai điệu','Cảm âm nhịp','Cảm nhạc','Tái hiện cảm xúc nội tại','Biểu đạt cảm xúc','Mức độ tập trung (không bị xao lãng)','Giọng pha (mixed voice)','Điều tiết âm lượng','Điều tiết áp suất hơi','Giọng siêu trầm (Vocal Fry)','Hát theo điệu thức (Flow)','Khả năng hát liền tiếng','Khả năng hát nảy tiếng','Sửa lỗi (Khóa “UNLIMIT” : 1 kèm 4)','Sửa lỗi khó trị (Khóa “UNLIMIT +” : 1 kèm 2)','Học riêng (Khóa cao cấp: 1 kèm 1)');
+        $arr_details_guitar = array('','Khả năng tách và sử dụng các ngón','Sử dụng các hợp âm căn bản','Nhấn, nhả thế bấm','Rung dây','Các điệu thức căn bản (Slow rock; Ballad chậm; Ballad nhanh)','Tỉa (móc)','Quạt','Kết hợp (các điệu thức khó)','Tái hiện Melody đơn giản','Sáng tác melody trên nền nhạc','Tốc độ đi note','Đọc note','Đọc nhịp','Đọc hợp âm','Phân biệt các điệu thức','Phân biệt các bậc (I-V; I-III; I-IV…) ','Phân biệt các màu (Trưởng – Thứ; Trưởng -7; Thứ -7; Trưởng 7 – 7; Thứ 7 – 7…)','Phần mềm/ thiết bị chỉnh dây đàn','Phần mềm/ website cung cấp hợp âm','Sử dụng Capo','Tư vấn chọn đàn','Lỗi khó sửa (lớp học kèm 5 người)','Học riêng (1 kèm 1)');
     }
+    
 ?>

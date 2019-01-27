@@ -44,6 +44,15 @@ $('.11').click(function(){
 $('.13').click(function(){
 	$('.14').focus();
 });
+$('.15').click(function(){
+	$('.16').focus();
+});
+$('.17').click(function(){
+	$('.18').focus();
+});
+$('.21').click(function(){
+	$('.22').focus();
+});
 $('.12').focus(function(){
 	$('.11').attr("checked","checked");
 });
@@ -77,33 +86,63 @@ $("input[name='question6']").on('change',function(){
 // 		value7 = $("input[name='question7']:checked").val();
 // 	});
 // });
+var save7 = ""; // Biến được dùng để lưu giá trị value1 khi submit nhiều lần
+var save8 = ""; // Biến được dùng để lưu giá trị value1 khi submit nhiều lần
+var save9 = ""; // Biến được dùng để lưu giá trị value1 khi submit nhiều lần
+var save10 = ""; // Biến được dùng để lưu giá trị value1 khi submit nhiều lần
+var save11 = ""; // Biến được dùng để lưu giá trị value1 khi submit nhiều lần
+var checkspace = /^\s+$/;
 $('form').on('submit',function(){
-
 	var val2 = $('.14').val();
 	$('.13').val(val2);
 	$("input[name='question7']:checked").each(function(){
-		value7 += $(this).val() + " ";
-	});
+		value7 += $(this).val() + "\n";
+	});// Lấy được giá trị value1
+	if(save7!=value7){ // so sánh giá trị value1 với save1
+		save7 = value7;// Nếu không bằng thì gán value1 vào save1
+	}
+	value7 = ""; // Gán value1 = rỗng
+	
 	var val3 = $('.16').val();
-	$('.15').val(val3);
+	$('.13').val(val3);
 	$("input[name='question9']:checked").each(function(){
 		value8 += $(this).val() + " ";
-	});
+	});// Lấy được giá trị value1
+	if(save8!=value8){ // so sánh giá trị value1 với save1
+		save8 = value8;// Nếu không bằng thì gán value1 vào save1
+	}
+	value8 = ""; // Gán value1 = rỗng
+
 	var val4 = $('.18').val();
 	$('.17').val(val4);
 	$("input[name='question10']:checked").each(function(){
 		value9 += $(this).val() + " ";
-	});
+	});// Lấy được giá trị value1
+	if(save9!=value9){ // so sánh giá trị value1 với save1
+		save9 = value9;// Nếu không bằng thì gán value1 vào save1
+	}
+	value9 = ""; // Gán value1 = rỗng
+
 	var val5 = $('.20').val();
 	$('.19').val(val5);
 	$("input[name='question11']:checked").each(function(){
 		value10 += $(this).val() + " ";
-	});
+	});// Lấy được giá trị value1
+	if(save10!=value10){ // so sánh giá trị value1 với save1
+		save10 = value10;// Nếu không bằng thì gán value1 vào save1
+	}
+	value10 = ""; // Gán value1 = rỗng
+	
 	var val6 = $('.22').val();
 	$('.21').val(val6);
 	$("input[name='question12']:checked").each(function(){
 		value11 += $(this).val() + " ";
-	});
+	});// Lấy được giá trị value1
+	if(save11!=value11){ // so sánh giá trị value1 với save1
+		save11 = value11;// Nếu không bằng thì gán value1 vào save1
+	}
+	value11 = ""; // Gán value1 = rỗng
+	
 // Chạy countdown
 var time = 5;
 function countDown(){
@@ -175,7 +214,7 @@ else if (isEmpty($('.text-area2').val()))
 		timer: 10000
 	});
 	return false;
-}else if (isEmpty(value7))
+}else if (isEmpty(save7)||checkspace.test(save7))
 {
 	swal({
 		title: "Thông báo!",
@@ -185,7 +224,7 @@ else if (isEmpty($('.text-area2').val()))
 		timer: 10000
 	});
 	return false;
-}else if (isEmpty(value8))
+}else if (isEmpty(save8)||checkspace.test(save8))
 {
 	swal({
 		title: "Thông báo!",
@@ -195,7 +234,7 @@ else if (isEmpty($('.text-area2').val()))
 		timer: 10000
 	});
 	return false;
-}else if (isEmpty(value9))
+}else if (isEmpty(save9)||checkspace.test(save9))
 {
 	swal({
 		title: "Thông báo!",
@@ -205,7 +244,7 @@ else if (isEmpty($('.text-area2').val()))
 		timer: 10000
 	});
 	return false;
-}else if (isEmpty(value10))
+}else if (isEmpty(save10)||checkspace.test(save10))
 {
 	swal({
 		title: "Thông báo!",
@@ -215,7 +254,7 @@ else if (isEmpty($('.text-area2').val()))
 		timer: 10000
 	});
 	return false;
-}else if (isEmpty(value11))
+}else if (isEmpty(save11)||checkspace.test(save11))
 {
 	swal({
 		title: "Thông báo!",
@@ -235,12 +274,12 @@ else if (isEmpty($('.text-area2').val()))
 				question2: $('.text-area1').val(),
 				question3: $('.text-area2').val(),
 				question4: value6,
-				question5: value7,
+				question5: save7,
 				question6: $("input[name='question8']").val(),
-				question7: value8,
-				question8: value9,
-				question9: value10,
-				question10: value11,
+				question7: save8,
+				question8: save9,
+				question9: save10,
+				question10: save11,
 				topicid: $("input[name='topicid']").val()
 				},
 				success: function(data){

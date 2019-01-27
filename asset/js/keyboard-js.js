@@ -44,6 +44,21 @@
 			$('.13').click(function(){
 				$('.14').focus();
 			});
+			$('.15').click(function(){
+				$('.16').focus();
+			});
+			$('.17').click(function(){
+				$('.18').focus();
+			});
+			$('.19').click(function(){
+				$('.20').focus();
+			});
+			$('.21').click(function(){
+				$('.22').focus();
+			});
+			$('.23').click(function(){
+				$('.24').focus();
+			});
 			$('.12').focus(function(){
 				$('.11').attr("checked","checked");
 			});
@@ -91,32 +106,71 @@
 			// 		value7 = $("input[name='question7']:checked").val();
 			// 	});
 			// });
+			var save5 = "";
+			var save6 = "";
+			var save7 = "";
+			var save8 = "";
+			var save9 = "";
 			$('form').on('submit',function(){
 				var val2 = $('.16').val();
 				$('.15').val(val2);
 				$("input[name='question7']:checked").each(function(){
 					value5 += $(this).val() + " ";
 				});
+				if(save5!=value5){ // so sánh giá trị value1 với save1
+					save5 = value5;// Nếu không bằng thì gán value1 vào save1
+				}
+				value5 = ""; // Gán value1 = rỗng
+
+				// var val2 = $('.14').val();
+				// $('.13').val(val2);
+				// $("input[name='question7']:checked").each(function(){
+				// 	value7 += $(this).val() + " ";
+				// });// Lấy được giá trị value1
+				// if(save7!=value7){ // so sánh giá trị value1 với save1
+				// 	save7 = value7;// Nếu không bằng thì gán value1 vào save1
+				// }
+				// value7 = ""; // Gán value1 = rỗng
+
 				var val3 = $('.18').val();
 				$('.17').val(val3);
 				$("input[name='question9']:checked").each(function(){
 					value6 += $(this).val() + " ";
 				});
+				if(save6!=value6){ // so sánh giá trị value1 với save1
+					save6 = value6;// Nếu không bằng thì gán value1 vào save1
+				}
+				value6 = "";
+
 				var val4 = $('.20').val();
 				$('.19').val(val4);
 				$("input[name='question10']:checked").each(function(){
 					value7 += $(this).val() + " ";
 				});
+				if(save7!=value7){ // so sánh giá trị value1 với save1
+					save7 = value7;// Nếu không bằng thì gán value1 vào save1
+				}
+				value7 = "";
+
 				var val5 = $('.22').val();
 				$('.21').val(val5);
 				$("input[name='question11']:checked").each(function(){
 					value8 += $(this).val() + " ";
 				});
+				if(save8!=value8){ // so sánh giá trị value1 với save1
+					save8 = value8;// Nếu không bằng thì gán value1 vào save1
+				}
+				value8 = "";
+
 				var val6 = $('.24').val();
 				$('.23').val(val6);
 				$("input[name='question12']:checked").each(function(){
 					value9 += $(this).val() + " ";
 				});
+				if(save9!=value9){ // so sánh giá trị value1 với save1
+					save9 = value9;// Nếu không bằng thì gán value1 vào save1
+				}
+				value9 = "";
 				// Countdown
 	            var time = 5;
 	            function countDown(){
@@ -192,7 +246,7 @@
 					});
 					return false;
 			    }
-			    else if (isEmpty(value5))
+			    else if (isEmpty(save5)||checkspace.test(save5))
 			    {
 			        swal({
 					  title: "Thông báo!",
@@ -203,7 +257,7 @@
 					});
 					return false;
 			    }
-			    else if (isEmpty(value6))
+			    else if (isEmpty(save6)||checkspace.test(save6))
 			    {
 			        swal({
 					  title: "Thông báo!",
@@ -214,7 +268,7 @@
 					});
 					return false;
 			    }
-			    else if (isEmpty(value7))
+			    else if (isEmpty(save7)||checkspace.test(save7))
 			    {
 			        swal({
 					  title: "Thông báo!",
@@ -225,7 +279,7 @@
 					});
 					return false;
 			    }
-			    else if (isEmpty(value8))
+			    else if (isEmpty(save8)||checkspace.test(save8))
 			    {
 			        swal({
 					  title: "Thông báo!",
@@ -236,7 +290,7 @@
 					});
 					return false;
 			    }
-			    else if (isEmpty(value9))
+			    else if (isEmpty(save9)||checkspace.test(save9))
 			    {
 			        swal({
 					  title: "Thông báo!",
@@ -256,16 +310,24 @@
 								question2: $('.text-area1').val(),
 								question3: $('.text-area2').val(),
 								question4: value4,
-								question5: value5,
-								question6: value6,
-								question7: value7,
-								question8: value8,
-								question9: value9,
+								question5: save5,
+								question6: save6,
+								question7: save7,
+								question8: save8,
+								question9: save9,
 								question10:  $("input[name='question8']").val(),
 								topicid: $("input[name='topicid']").val()
 							},
 							success: function(data){
-								$('.result').html(data);
+								document.onload = init(); // start countdown
+								swal({
+									title: data,
+									allowOutsideClick: false,
+									allowEscapeKey : false,
+									html: '<h2>Đang chuyển tới trang cá nhân trong <span id="container"></span> giây!</h2>',
+									type: "success",
+									confirmButtonText: 'OK',
+								});
 							}
 						});
 						return false;

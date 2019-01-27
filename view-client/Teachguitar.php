@@ -133,9 +133,9 @@ $title_header = "Bảng khảo sát chủ đề guitar";
 				<label for="15">Nhìn được bản hòa tấu chung với các nhạc cụ khác</label>
 			</label>
 			<label class="a">
-				<input type="checkbox" name="question7" value="" class="13" id="13">
+				<input type="checkbox" name="question7" value="" class="13" id="16">
 				<span class="checkmark"></span>
-				<label for="13">Mục khác:</label>
+				<label for="16">Mục khác:</label>
 				<div class="effect-area">
 					<textarea class="14"  rows="1" cols="100" maxlength="100" style="resize: none;" placeholder="Mục khác..."></textarea>
 					<span class="focus-border"></span>
@@ -145,29 +145,29 @@ $title_header = "Bảng khảo sát chủ đề guitar";
 		<div class="qs-background">
 			<label><label class="qs">Câu hỏi 6: </label> Khả năng chơi Melody (giai điệu) của bạn thế nào?  <small style="color: red;">*</small></label>
 			<label class="a">
-				<input type="checkbox" name="question9" value="Chưa biết chút nào" id="14">
+				<input type="checkbox" name="question9" value="Chưa biết chút nào" id="17">
 				<span class="checkmark"></span>
-				<label for="14">Chưa biết chút nào</label>
+				<label for="17">Chưa biết chút nào</label>
 			</label>
 			<label class="a">
-				<input type="checkbox" name="question9" value="Biết cao độ của từng dây buông (cả 6 dây)" id="15">
+				<input type="checkbox" name="question9" value="Biết cao độ của từng dây buông (cả 6 dây)" id="18">
 				<span class="checkmark"></span>
-				<label for="15">Biết cao độ của từng dây buông (cả 6 dây)</label>
+				<label for="18">Biết cao độ của từng dây buông (cả 6 dây)</label>
 			</label>
 			<label class="a">
-				<input type="checkbox" name="question9" value="Biết tạo ra note đúng trên đàn (Vd:muốn đánh note C4 thì biết ngay được cần chặn ở đâu, dây nào)" id="16">
+				<input type="checkbox" name="question9" value="Biết tạo ra note đúng trên đàn (Vd:muốn đánh note C4 thì biết ngay được cần chặn ở đâu, dây nào)" id="19">
 				<span class="checkmark"></span>
-				<label for="16">Biết tạo ra note đúng trên đàn (Vd:muốn đánh note C4 thì biết ngay được cần chặn ở đâu, dây nào)</label>
+				<label for="19">Biết tạo ra note đúng trên đàn (Vd:muốn đánh note C4 thì biết ngay được cần chặn ở đâu, dây nào)</label>
 			</label>
 			<label class="a">
-				<input type="checkbox" name="question9" value="Nếu bạn biết được một giai điệu nào đó trong đầu, bạn chỉ mất 10 phút để đàn được 1 câu?" id="17">
+				<input type="checkbox" name="question9" value="Nếu bạn biết được một giai điệu nào đó trong đầu, bạn chỉ mất 10 phút để đàn được 1 câu?" id="20">
 				<span class="checkmark"></span>
-				<label for="17">Nếu bạn biết được một giai điệu nào đó trong đầu, bạn chỉ mất 10 phút để đàn được 1 câu?</label>
+				<label for="20">Nếu bạn biết được một giai điệu nào đó trong đầu, bạn chỉ mất 10 phút để đàn được 1 câu?</label>
 			</label>
 			<label class="a">
-				<input type="checkbox" name="question9" value="" class="15" id="18">
+				<input type="checkbox" name="question9" value="" class="15" id="21">
 				<span class="checkmark"></span>
-				<label for="18">Mục khác:</label>
+				<label for="21">Mục khác:</label>
 				<div class="effect-area">
 					<textarea class="16"  rows="1" cols="100" maxlength="100" style="resize: none;" placeholder="Mục khác..."></textarea>
 					<span class="focus-border"></span>
@@ -177,44 +177,44 @@ $title_header = "Bảng khảo sát chủ đề guitar";
 		<div class="qs-background">
 			<label><label class="qs">Câu hỏi 7: </label> Khả năng chặn hợp âm của bạn thế nào? <small style="color: red;">*</small></label>
 			<label class="a">
-				<input type="checkbox" name="question10" value="Chưa biết chút nào" id="19">
+				<input type="checkbox" name="question10" value="Chưa biết chút nào" id="22">
 				<span class="checkmark"></span>
-				<label for="19">Chưa biết chút nào</label>
+				<label for="22">Chưa biết chút nào</label>
 			</label>
 			<label class="a">
-				<input type="checkbox" name="question10" value="Biết vài thế bấm căn bản nhưng chưa nhuyễn" id="20">
+				<input type="checkbox" name="question10" value="Biết vài thế bấm căn bản nhưng chưa nhuyễn" id="23">
 				<span class="checkmark"></span>
-				<label for="20">Biết vài thế bấm căn bản nhưng chưa nhuyễn</label>
+				<label for="23">Biết vài thế bấm căn bản nhưng chưa nhuyễn</label>
 			</label>
 			<label class="a">
-				<input type="checkbox" name="question10" value="Có thể chơi tốt (chuyển nhanh, nhuyễn) các hợp âm căn bản" id="21">
+				<input type="checkbox" name="question10" value="Có thể chơi tốt (chuyển nhanh, nhuyễn) các hợp âm căn bản" id="24">
 				<span class="checkmark"></span>
-				<label for="21">Có thể chơi tốt (chuyển nhanh, nhuyễn) các hợp âm căn bản</label>
+				<label for="24">Có thể chơi tốt (chuyển nhanh, nhuyễn) các hợp âm căn bản</label>
 			</label>
 			<label class="a">
-				<input type="checkbox" name="question10" value="Có thể chơi tốt cả các hợp âm khó" id="22">
+				<input type="checkbox" name="question10" value="Có thể chơi tốt cả các hợp âm khó" id="25">
 				<span class="checkmark"></span>
-				<label for="22">Có thể chơi tốt cả các hợp âm khó</label>
+				<label for="25">Có thể chơi tốt cả các hợp âm khó</label>
 			</label>
 			<label class="a">
-				<input type="checkbox" name="question10" value="Bạn đã tự có thể đệm đàn cho chính mình ở 1 bài nào đó?" id="23">
+				<input type="checkbox" name="question10" value="Bạn đã tự có thể đệm đàn cho chính mình ở 1 bài nào đó?" id="26">
 				<span class="checkmark"></span>
-				<label for="23">Bạn đã tự có thể đệm đàn cho chính mình ở 1 bài nào đó?</label>
+				<label for="26">Bạn đã tự có thể đệm đàn cho chính mình ở 1 bài nào đó?</label>
 			</label>
 			<label class="a">
-				<input type="checkbox" name="question10" value="Bạn có khả năng đệm đàn cho người khác một số bài dễ nếu đã tập trước" id="24">
+				<input type="checkbox" name="question10" value="Bạn có khả năng đệm đàn cho người khác một số bài dễ nếu đã tập trước" id="27">
 				<span class="checkmark"></span>
-				<label for="24">Bạn có khả năng đệm đàn cho người khác một số bài dễ nếu đã tập trước</label>
+				<label for="27">Bạn có khả năng đệm đàn cho người khác một số bài dễ nếu đã tập trước</label>
 			</label>
 			<label class="a">
-				<input type="checkbox" name="question10" value="Bạn có khả năng nhìn vào hợp âm và đệm được cho người khác hát luôn?" id="25">
+				<input type="checkbox" name="question10" value="Bạn có khả năng nhìn vào hợp âm và đệm được cho người khác hát luôn?" id="28">
 				<span class="checkmark"></span>
-				<label for="25">Bạn có khả năng nhìn vào hợp âm và đệm được cho người khác hát luôn?</label>
+				<label for="28">Bạn có khả năng nhìn vào hợp âm và đệm được cho người khác hát luôn?</label>
 			</label>
 			<label class="a">
-				<input type="checkbox" name="question10" value="" class="17" id="26">
+				<input type="checkbox" name="question10" value="" class="17" id="29">
 				<span class="checkmark"></span>
-				<label for="26">Mục khác:</label>
+				<label for="29">Mục khác:</label>
 				<div class="effect-area">
 					<textarea class="18"  rows="1" cols="100" maxlength="100" style="resize: none;" placeholder="Mục khác..."></textarea>
 					<span class="focus-border"></span>
@@ -224,39 +224,39 @@ $title_header = "Bảng khảo sát chủ đề guitar";
 		<div class="qs-background">
 			<label><label class="qs">Câu hỏi 8: </label> Bạn chơi được các điệu thức nào <small style="color: red;">*</small></label>
 			<label class="a">
-				<input type="checkbox" name="question11" value="Chưa biết chút nào" id="27">
+				<input type="checkbox" name="question11" value="Chưa biết chút nào" id="30">
 				<span class="checkmark"></span>
-				<label for="27">Chưa biết chút nào</label>
+				<label for="30">Chưa biết chút nào</label>
 			</label>
 			<label class="a">
-				<input type="checkbox" name="question11" value="Biết và chơi được một ít điệu Slow Rock" id="28">
+				<input type="checkbox" name="question11" value="Biết và chơi được một ít điệu Slow Rock" id="31">
 				<span class="checkmark"></span>
-				<label for="28">Biết và chơi được một ít điệu Slow Rock</label>
+				<label for="31">Biết và chơi được một ít điệu Slow Rock</label>
 			</label>
 			<label class="a">
-				<input type="checkbox" name="question11" value="Biết và chơi được 1 ít điệu Ballad" id="29">
+				<input type="checkbox" name="question11" value="Biết và chơi được 1 ít điệu Ballad" id="32">
 				<span class="checkmark"></span>
-				<label for="29">Biết và chơi được 1 ít điệu Ballad</label>
+				<label for="32">Biết và chơi được 1 ít điệu Ballad</label>
 			</label>
 			<label class="a">
-				<input type="checkbox" name="question11" value="Bạn biết Tỉa?" id="30">
+				<input type="checkbox" name="question11" value="Bạn biết Tỉa?" id="33">
 				<span class="checkmark"></span>
-				<label for="30">Bạn biết "Tỉa"?</label>
+				<label for="33">Bạn biết "Tỉa"?</label>
 			</label>
 			<label class="a">
-				<input type="checkbox" name="question11" value="Bạn biết Quạt?" id="31">
+				<input type="checkbox" name="question11" value="Bạn biết Quạt?" id="34">
 				<span class="checkmark"></span>
-				<label for="31">Bạn biết "Quạt"?</label>
+				<label for="34">Bạn biết "Quạt"?</label>
 			</label>
 			<label class="a">
-				<input type="checkbox" name="question11" value="Bạn biết các điệu thức phức tạp?" id="32">
+				<input type="checkbox" name="question11" value="Bạn biết các điệu thức phức tạp?" id="35">
 				<span class="checkmark"></span>
-				<label for="32">Bạn biết các điệu thức phức tạp?</label>
+				<label for="35">Bạn biết các điệu thức phức tạp?</label>
 			</label>
 			<label class="a">
-				<input type="checkbox" name="question11" value="" class="19" id="33">
+				<input type="checkbox" name="question11" value="" class="19" id="36">
 				<span class="checkmark"></span>
-				<label for="33">Mục khác:</label>
+				<label for="36">Mục khác:</label>
 				<div class="effect-area">
 					<textarea class="20"  rows="1" cols="100" maxlength="100" style="resize: none;" placeholder="Mục khác..."></textarea>
 					<span class="focus-border"></span>
@@ -266,29 +266,29 @@ $title_header = "Bảng khảo sát chủ đề guitar";
 		<div class="qs-background">
 			<label><label class="qs">Câu hỏi 9: </label> Khả năng cảm âm- cảm nhạc của bạn <small style="color: red;">*</small></label>
 			<label class="a">
-				<input type="checkbox" name="question12" value="Bạn phân biệt (nghe) được 2 note có cao độ khác nhau nửa cung (Hai khung kề nhau trên cần đàn) chứ?" id="34">
+				<input type="checkbox" name="question12" value="Bạn phân biệt (nghe) được 2 note có cao độ khác nhau nửa cung (Hai khung kề nhau trên cần đàn) chứ?" id="37">
 				<span class="checkmark"></span>
-				<label for="34">Bạn phân biệt (nghe) được 2 note có cao độ khác nhau nửa cung (Hai khung kề nhau trên cần đàn) chứ?</label>
+				<label for="37">Bạn phân biệt (nghe) được 2 note có cao độ khác nhau nửa cung (Hai khung kề nhau trên cần đàn) chứ?</label>
 			</label>
 			<label class="a">
-				<input type="checkbox" name="question12" value="Bạn phân biệt được các điệu thức khác nhau chứ?" id="35">
+				<input type="checkbox" name="question12" value="Bạn phân biệt được các điệu thức khác nhau chứ?" id="38">
 				<span class="checkmark"></span>
-				<label for="35">Bạn phân biệt được các điệu thức khác nhau chứ?</label>
+				<label for="38">Bạn phân biệt được các điệu thức khác nhau chứ?</label>
 			</label>
 			<label class="a">
-				<input type="checkbox" name="question12" value="Bạn nghe nhạc nhiều hơn khoảng 0.5 giờ mỗi ngày chứ?" id="36">
+				<input type="checkbox" name="question12" value="Bạn nghe nhạc nhiều hơn khoảng 0.5 giờ mỗi ngày chứ?" id="39">
 				<span class="checkmark"></span>
-				<label for="36">Bạn nghe nhạc nhiều hơn khoảng 0.5 giờ mỗi ngày chứ?</label>
+				<label for="39">Bạn nghe nhạc nhiều hơn khoảng 0.5 giờ mỗi ngày chứ?</label>
 			</label>
 			<label class="a">
-				<input type="checkbox" name="question12" value="Bạn có rất thích (hoặc thần tượng) cách chơi của ca sĩ, band nhạc hay nhạc công nào không?" id="37">
+				<input type="checkbox" name="question12" value="Bạn có rất thích (hoặc thần tượng) cách chơi của ca sĩ, band nhạc hay nhạc công nào không?" id="40">
 				<span class="checkmark"></span>
-				<label for="37">Bạn có rất thích (hoặc thần tượng) cách chơi của ca sĩ, band nhạc hay nhạc công nào không?</label>
+				<label for="40">Bạn có rất thích (hoặc thần tượng) cách chơi của ca sĩ, band nhạc hay nhạc công nào không?</label>
 			</label>
 			<label class="a">
-				<input type="checkbox" name="question12" value="" class="21" id="38">
+				<input type="checkbox" name="question12" value="" class="21" id="41">
 				<span class="checkmark"></span>
-				<label for="38">Mục khác:</label>
+				<label for="41">Mục khác:</label>
 				<div class="effect-area">
 					<textarea class="22"  rows="1" cols="100" maxlength="100" style="resize: none;" placeholder="Mục khác..."></textarea>
 					<span class="focus-border"></span>

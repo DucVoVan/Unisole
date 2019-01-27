@@ -4,8 +4,7 @@
 	$result = mysqli_query($conn, $sql);
 	echo '<div><a class="hi" href="http://localhost/Unisole/views/ShowMusic.php" target="blank">Xem tất cả câu trả lời của học viên</a></div>';
 
-	echo "<table>";
-	echo '<tr>
+	echo '<table><tr>
 		<th>Mục đích muốn học hát</th>
 		<th>Nếu ngay bây giờ, bạn đang ngồi một mình, cho bạn NGHE nhạc thì bạn sẽ chọn bài hát cụ thể nào? (ghi tên 3 bài hát cụ thể)</th>
 		<th>Bạn thích chất giọng của ca sĩ nào nhất (hay cụ thể hơn, hãy ghi thêm trong chất giọng đó, bạn thích ở điểm nào, điểm nào không thích) ? </th>

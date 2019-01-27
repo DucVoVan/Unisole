@@ -29,7 +29,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<p class="w3-agileits1">Oops!</p>
 					<canvas id="demo-canvas"></canvas>
 					<img src="http://localhost/Unisole/asset/image/owl.gif" alt="flashy" class="w3l">
-					<h2 class="main-title">401</span></h2>
+					<h2 class="main-title">404</span></h2>
 					<p class="w3-agileits2">Bạn không có quyền truy cập trang này. Vui lòng <a href="http://localhost/Unisole/">quay về trang chủ</a> và đăng nhập.</p>
 
 					<p class="copyright">© 2019 Unisole Error Page.</p>

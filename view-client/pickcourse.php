@@ -24,11 +24,17 @@ if($_SESSION['band']==true){
 }else{
 	$band = "http://localhost/Unisole/view-client/Band.php";
 }
+if($_SESSION['music']==true||$_SESSION['guitar']==true||$_SESSION['keyboard']==true||$_SESSION['band']==true){
+	$redirect_user = true;
+}else{
+	$redirect_user = false;
+}
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Trang Giới thiệu khóa học</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel='stylesheet' id='bootstrap-css-css'  href='http://localhost/Unisole/asset/css/bootstrap.min.css' type='text/css' media='all' />
 	<link rel="stylesheet" type="text/css" href="http://localhost/Unisole/asset/css/pickcourse.css" media="all" />
 	<link rel="shortcut icon" type="image/png" href="http://localhost/Unisole/asset/image/logo.png"/>
@@ -38,14 +44,10 @@ if($_SESSION['band']==true){
 	<script src="http://localhost/Unisole/asset/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<header>
-		<div class="left-header">
-			<img src="http://localhost/Unisole/asset/image/logo.png">
-		</div>
-		<div class="right-header">
-			<h2>Trang chọn chủ đề</h2>
-		</div>
-	</header>
+	<?php 
+		$title_header = "Trang chọn chủ đề";
+		require("../header.php"); 
+	?>
 	<div class="select">
 		<h2 class="alert-pick">Chào mừng bạn đến với Unisole!</h2>
 		<div class="topic">
@@ -107,7 +109,7 @@ if($_SESSION['band']==true){
 		var keyboard = "<?php echo $keyboard; ?>";
 		var band = "<?php echo $band; ?>";
 		$('.music').click(function(){
-			if (value1=="#"){
+			if (music=="#"){
 				swal({
 					title: "Thông báo!",
 					text: "Bạn đã hoàn thành bản đánh giá năng lực với chủ đề thanh nhạc!",
