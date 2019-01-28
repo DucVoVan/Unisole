@@ -6,7 +6,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Flashy Error Page a Flat Responsive Widget Template :: w3layouts</title>
+	<title>Lỗi 404 - Unisole</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="keywords" content="Smart Error Page Responsive, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design" />
@@ -28,7 +28,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<h1 class="header-w3ls">Lỗi trang</h1>
 					<p class="w3-agileits1">Oops!</p>
 					<canvas id="demo-canvas"></canvas>
-					<img src="http://localhost/Unisole/asset/image/owl.gif" alt="flashy" class="w3l">
+					<!-- <img src="http://localhost/Unisole/asset/image/owl.gif" alt="flashy" class="w3l"> -->
 					<h2 class="main-title">404</span></h2>
 					<p class="w3-agileits2">Bạn không có quyền truy cập trang này. Vui lòng <a href="http://localhost/Unisole/">quay về trang chủ</a> và đăng nhập.</p>
 

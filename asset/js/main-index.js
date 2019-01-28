@@ -31,8 +31,27 @@
     	}
 	});
 
-	$('.img').click(function(){
-		$('.chatbot-child').css("display","block");
+	$('.avatar img').click(function(){
+		$(".mark-point").fadeToggle();
+		$(".chatbot-child").fadeToggle();
+	});
+	$('.topicchildren').click(function(){
+		$.ajax({
+			url: "http://localhost/Unisole/Controller-client/QueryCourseCtr.php",
+			type: "POST",
+			data: {
+				topicidchildren: $(this).attr("data-id"),
+				nametopic: $(this).html()
+			},
+			success: function(data){
+				swal({
+					title: "Thông báo!",
+					html: data,
+					type: "info",
+					confirmButtonText: 'OK',
+				});
+			}
+		});
 	});
 })(jQuery);
 

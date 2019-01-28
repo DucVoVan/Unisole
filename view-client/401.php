@@ -6,7 +6,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Lỗi 401 - Unisole</title>
+	<title>Lỗi 404 - Unisole</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="keywords" content="Smart Error Page Responsive, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design" />
@@ -21,14 +21,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!-- js files -->
 
 	<!-- /js files -->
-	<?php 
-		if($_GET['t']=="teacher"){
-			$link = "http://localhost/Unisole/views/Login-teacher.php";
-		}
-		if($_GET['t']=="admin"){
-			$link = "http://localhost/Unisole/views/Login-admin.php";
-		}
-	?>
 	<body>
 		<div class="container demo-2">
 			<div class="content">
@@ -36,9 +28,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<h1 class="header-w3ls">Lỗi trang</h1>
 					<p class="w3-agileits1">Oops!</p>
 					<canvas id="demo-canvas"></canvas>
-					<img src="http://localhost/Unisole/asset/image/owl.gif" alt="flashy" class="w3l">
-					<h2 class="main-title">401</span></h2>
-					<p class="w3-agileits2">Bạn không có quyền truy cập trang này. Vui lòng <a href="<?php echo $link; ?>">quay về trang chủ</a> và đăng nhập.</p>
+					<!-- <img src="http://localhost/Unisole/asset/image/owl.gif" alt="flashy" class="w3l"> -->
+					<h2 class="main-title">404</span></h2>
+					<p class="w3-agileits2">Bạn không có quyền truy cập trang này. Vui lòng <a href="http://localhost/Unisole/view-client/pickcourse.php">quay về trang đánh giá</a> và làm ít nhất một bản đánh giá năng lực để được quyền truy cập trang này.</p>
 
 					<p class="copyright">© 2019 Unisole Error Page.</p>
 				</div>

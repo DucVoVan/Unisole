@@ -70,6 +70,7 @@
 			$user = new UserModelLogin($username, $password);
 			$row = $user->authlogin();
 			$_SESSION['id'] = $row['id'];
+			$_SESSION['fullname'] = $row['fullname'];
 
 			if($row){
  				// Kiểm tra xem account đã chọn khóa học nào chưa, nếu chọn rồi thì chuyển sang trang cá nhân, nếu chưa chọn thì ta về trang đánh giá năng lực Markingforce.php

@@ -12,7 +12,7 @@
 				<?php
 					if(isset($redirect_user)){
 						if($redirect_user==true){
-							echo '<p><a href="">Trang cá nhân <i class="fas fa-angle-double-right"></i></a></p>';
+							echo '<p class="redirect-header"><a href="http://localhost/Unisole/view-client/User.php">Trang cá nhân <i class="fas fa-angle-double-right"></i></a></p>';
 						}
 					}
 				?>

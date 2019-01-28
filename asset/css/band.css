@@ -245,15 +245,8 @@ header{
 .right-header{
 	max-width: 70%;
 	flex-basis: 70%;
-	padding-top: 5%;
 }
-h2{
-	height: 100%;
-	margin: 0 0 0 20%;
-	font-weight: 500;
-	color: #ff4411;
-	text-transform: uppercase;
-}
+
 .qs{
 	color: red;
 	text-decoration: underline;

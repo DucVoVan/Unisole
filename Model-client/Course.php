@@ -10,7 +10,13 @@
 				$data[] = $row;
 			}
 			echo json_encode($data);
-		}		
+		}
+		public function getCourseInfo($id){
+			$conn = $this->connect();
+			$query = "SELECT * FROM `course` WHERE `id`='".$id."'";
+			$result = mysqli_query($conn, $query);
+			return $row = mysqli_fetch_assoc($result);
+		}
 	}
 	
 ?>

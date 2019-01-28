@@ -31,9 +31,6 @@
     	}
 	});
 
-	$('.img').click(function(){
-		$('.chatbot-child').css("display","block");
-	});
 })(jQuery);
 
 

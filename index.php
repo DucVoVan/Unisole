@@ -31,7 +31,15 @@
         <div class="container">
             <div class="row">
                 <div class="home-left col-xl-3 col-lg-3">
-                    <div class="site-logo"></div>
+                    <div class="site-logo">
+                        <a href="http://localhost/Unisole/"><img src="http://localhost/Unisole/asset/image/logo.png"></a>
+                    </div>
+                    <div class="avatar">
+                        <img src="http://localhost/Unisole/asset/image/avatar.png">
+                    </div>
+                    <div class="advertisement">
+                        Quảng cáo đặt ở đây
+                    </div>
                 </div>
 
                 <div class="home-between col-xl-6 col-lg-6">
@@ -76,9 +84,11 @@ Mời bạn lựa chọn theo các phím chức năng sau:
                                 ?>
                                     <div class="dropdown">
                                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Dropdown button
+                                            <?php echo $_SESSION['fullname']; ?>
                                         </button>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="http://localhost/Unisole/view-client/User.php">Trang cá nhân</a>
+                                            <a class="dropdown-item" href="http://localhost/Unisole/view-client/pickcourse.php">Đánh giá năng lực</a>
                                             <a class="dropdown-item" href="http://localhost/Unisole/delete.php">Đăng xuất</a>
                                         </div>
                                     </div>

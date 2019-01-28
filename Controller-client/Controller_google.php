@@ -51,6 +51,7 @@ if(isset($_POST['phone'])){
 	$row = mysqli_fetch_assoc($result);
 	$courseregitered = new CourseRegistered();
 	$_SESSION['id'] = $row['id'];
+	$_SESSION['fullname'] = $row['fullname'];
 		// Kiểm tra tài khoản đã được đăng kí hay chưa
 	if($row){
 			// Tk được đkí rồi thì kiểm tra phone đã có hay chưa
