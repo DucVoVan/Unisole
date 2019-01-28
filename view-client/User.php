@@ -53,7 +53,7 @@ if($_SESSION['music']==true||$_SESSION['guitar']==true||$_SESSION['keyboard']==t
         <div class="home-between col-xl-6 col-lg-6">
           <div class="mark-point">
             <?php 
-            if($_SESSION['guitar']==true){
+            if($_SESSION['music']==true){
                 if(empty($arr_music)){
                     echo "<h3>Bảng điểm Thanh nhạc của bạn đang được chấm</h3>";
                 }else{
@@ -67,7 +67,7 @@ if($_SESSION['music']==true||$_SESSION['guitar']==true||$_SESSION['keyboard']==t
                     $arr_start = array(1,4,7,15,22,30);
                     $arr_end = array(3,6,14,21,28,31);
                     for($i=0; $i<count($arr_idtopicchild);$i++){
-                        $rd->render($arr_nametopicchild[$i],$arr_idtopicchild[$i],$arr_start[$i],$arr_end[$i],$arr_details_guitar,$arr_music);
+                        $rd->render($arr_nametopicchild[$i],$arr_idtopicchild[$i],$arr_start[$i],$arr_end[$i],$arr_details_music,$arr_music);
                     }
                     // $rd->render('Hơi',1,3,$arr_details_music,$arr_music);
                     // $rd->render('Thanh quản',4,6,$arr_details_music,$arr_music);
@@ -110,7 +110,7 @@ if($_SESSION['music']==true||$_SESSION['guitar']==true||$_SESSION['keyboard']==t
                     $arr_start = array(1,4,6,9,12,15,19);
                     $arr_end = array(3,5,8,11,14,18,20);
                     for($i=0; $i<count($arr_idtopicchild);$i++){
-                        $rd->render($arr_nametopicchild[$i],$arr_idtopicchild[$i],$arr_start[$i],$arr_end[$i],$arr_details_guitar,$arr_keyboard);
+                        $rd->render($arr_nametopicchild[$i],$arr_idtopicchild[$i],$arr_start[$i],$arr_end[$i],$arr_details_keyboard,$arr_keyboard);
                     }
                     // $rd->render('Tay trái',1,3,$arr_details_keyboard,$arr_keyboard);
                     // $rd->render('Tay phải',4,5,$arr_details_keyboard,$arr_keyboard);

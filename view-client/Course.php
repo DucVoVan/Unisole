@@ -56,7 +56,7 @@
 						type: "info",
 						confirmButtonText: 'OK',
 					});
-					setTimeout("location.reload(true);", 2000);
+					setTimeout("location.reload(true);", 3000);
 				}
 			});
 		});

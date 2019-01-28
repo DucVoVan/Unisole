@@ -92,7 +92,7 @@
 			<a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact1" role="tab" aria-controls="pills-contact" aria-selected="false">Quản lý giảng viên</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Chấm điểm thanh nhạc</a>
+			<a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Thêm một khóa học mới</a>
 		</li>
 	</ul>
 	<div class="tab-content" id="pills-tabContent">
@@ -106,7 +106,7 @@
 			<?php include("ManagerUserTeacher.php"); ?>
 		</div>
 		<div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-
+			<?php include("AddCourse.php"); ?>
 		</div>
 	</div>
 
