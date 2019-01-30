@@ -283,16 +283,16 @@ else if (isEmpty($('.text-area2').val()))
 				topicid: $("input[name='topicid']").val()
 				},
 				success: function(data){
-				document.onload = init(); // start countdown
-				swal({
-					title: data,
-					allowOutsideClick: false,
-					allowEscapeKey : false,
-					html: '<h2>Đang chuyển tới trang cá nhân trong <span id="container"></span> giây!</h2>',
-					type: "success",
-					confirmButtonText: 'OK',
-				});
-				}
+					document.onload = init(); // start countdown
+					swal({
+						title: data,
+						allowOutsideClick: false,
+						allowEscapeKey : false,
+						showConfirmButton: false,
+						html: '<h2>Đang chuyển tới trang cá nhân trong <span id="container"></span> giây!</h2>',
+						type: "success",
+					});
+					}
 				});
 						return false;
 					}else{

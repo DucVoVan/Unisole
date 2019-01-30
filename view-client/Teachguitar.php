@@ -304,7 +304,6 @@ $title_header = "Bảng khảo sát chủ đề guitar";
 </form>
 
 <div class="result"></div>
-<script src="http://localhost/Unisole/asset/js/jquery-3.3.1.min.js"></script>
 <script src="http://localhost/Unisole/asset/js/jquery.ui.widget.js" type="text/javascript"></script>
 <script src="http://localhost/Unisole/asset/js/jquery.iframe-transport.js" type="text/javascript"></script>
 <script src="http://localhost/Unisole/asset/js/jquery.fileupload.js" type="text/javascript"></script>

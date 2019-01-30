@@ -53,14 +53,13 @@ if($_SESSION['music']==true||$_SESSION['guitar']==true||$_SESSION['keyboard']==t
         <div class="home-between col-xl-6 col-lg-6">
           <div class="mark-point">
             <?php 
+            $rd = new RenderCodeTable();
             if($_SESSION['music']==true){
                 if(empty($arr_music)){
                     echo "<h3>Bảng điểm Thanh nhạc của bạn đang được chấm</h3>";
                 }else{
                     echo '<h2>Bảng điểm Chuyên mục Thanh nhạc</h2>';
                     echo '<table> <tr> <th>STT</th> <th class="1-music" style="width:20%";>Nội dung chính</th> <th class="2-music" style="width:40%;">Chi tiết</th> <th>Số điểm hiện tại</th> <th>Số điểm cần đạt</th> <th class="3-music" style="width:20%;">Ghi chú thêm</th> </tr>';
-                    $rd = new RenderCodeTable();
-
                     $tc = new TopicChildren(1);
                     $arr_idtopicchild = $tc->getIdTopicChildren();
                     $arr_nametopicchild = $tc->getNameTopicChildren();

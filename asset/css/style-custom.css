@@ -43,7 +43,7 @@ html, body{
     height: 90%;
     overflow-y: auto;
     width: 100%;
-    border: 1px solid #e5e5e5;
+    border: 1px solid #b7b7b7;
 }
 #messages pre{
     padding: 12px;
@@ -73,7 +73,7 @@ html, body{
     line-height: 1;
 }
 .home-between{
-    border: 1px solid #e5e5e5;
+    border: 1px solid #b7b7b7;
 }
 #number{
     width: 100%;
@@ -260,4 +260,8 @@ h2{
 }
 .Course-registered{
     border-bottom: 1px solid #c2c2c2;
+}
+h3{
+        color: #ff4411;
+        margin: 8px 0;
 }

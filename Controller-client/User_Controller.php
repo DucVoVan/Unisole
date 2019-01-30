@@ -25,6 +25,8 @@
 
 			if($row){
 				header("Location: http://localhost/Unisole/views/admin.php");
+			}else{
+				header("Location: http://localhost/Unisole/views/Login-admin.php?fail=fail");
 			}
 		}
 		
@@ -39,7 +41,7 @@
 			if($row){
 				header("Location: http://localhost/Unisole/views/Teacher-point.php");
 			}else{
-				echo "fail";
+				header("Location: http://localhost/Unisole/views/Login-teacher.php?fail=fail");
 			}
 		}
 

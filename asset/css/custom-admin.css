@@ -1,3 +1,9 @@
+body{
+    background: #485563;
+    background: -webkit-linear-gradient(to bottom, #29323c, #485563);
+    background: linear-gradient(to bottom, #29323c, #485563);
+    color: white;
+}
 #fadeandscale {
   transform: scale(0.8);
 }
@@ -28,15 +34,13 @@
 .box{
 width:1270px;
 padding:20px;
-background-color:#fff;
-border:1px solid #ccc;
+background-color:#27114c;
+border: 1px solid #b7b7b7;
 border-radius:5px;
 margin-top:25px;
 box-sizing:border-box;
 }
-tr:hover {
-    background-color: #dcdcdc!important;
-}
+
 #fade,
 #fade_wrapper,
 #fade_background {
@@ -66,8 +70,7 @@ table {
 }
 
 td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
+  border: 1px solid #b7b7b7;
   padding: 8px;
   /*width: 13%;*/
 }
@@ -77,9 +80,9 @@ th{
 td{
   font-weight: 300;
 }
-tr:nth-child(even) {
+/*tr:nth-child(even) {
   background-color: #dddddd;
-}
+}*/
 tr:nth-child(odd) {
         background-color: rgba(0,0,0,.05);
     }
@@ -116,4 +119,7 @@ tr:nth-child(odd) {
 .row{
   margin-right: 0px!important;
   margin-left: 0px!important;
+}
+table{
+  width: 100%!important;
 }

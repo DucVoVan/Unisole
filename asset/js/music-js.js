@@ -214,10 +214,10 @@ $('form').on('submit',function(){
 						title: data,
 						allowOutsideClick: false,
 						allowEscapeKey : false,
+						showConfirmButton: false,
 						html: '<h2>Đang chuyển tới trang cá nhân trong <span id="container"></span> giây!</h2>',
 						type: "success",
-						confirmButtonText: 'OK',
-					});
+ 					});
 					// setTimeout('Redirect()', 10000);
 					}
 				});

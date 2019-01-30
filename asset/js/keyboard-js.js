@@ -111,6 +111,7 @@
 			var save7 = "";
 			var save8 = "";
 			var save9 = "";
+			var checkspace = /^\s+$/;
 			$('form').on('submit',function(){
 				var val2 = $('.16').val();
 				$('.15').val(val2);
@@ -324,9 +325,9 @@
 									title: data,
 									allowOutsideClick: false,
 									allowEscapeKey : false,
+									showConfirmButton: false,
 									html: '<h2>Đang chuyển tới trang cá nhân trong <span id="container"></span> giây!</h2>',
 									type: "success",
-									confirmButtonText: 'OK',
 								});
 							}
 						});
