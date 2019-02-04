@@ -47,7 +47,7 @@
 			}
 		}
 		public function checkTopicCoursedBand(){
-			$sql = 'SELECT `topicid` FROM `band` WHERE accountid = "'.$this->accountid.'"' ;
+			$sql = 'SELECT `id` FROM `band` WHERE accountid = "'.$this->accountid.'"' ;
 			$conn = $this->connect();
 			$result = mysqli_query($conn, $sql);
 			$row = mysqli_fetch_assoc($result);

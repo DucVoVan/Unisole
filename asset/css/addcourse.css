@@ -1,0 +1,11 @@
+.admin{
+	display: flex;
+}
+.admin-left{
+	max-width: 250px;
+	flex-basis: 250px;
+}
+.admin-right{
+	max-width: 100%;
+	flex-basis: 100%;
+}

@@ -3,7 +3,7 @@
 <head>
 	<title></title>
 	<meta charset="utf-8">
-	<script src="http://localhost/Unisole/plugins/ckeditor/ckeditor.js"></script>
+	<script src="http://localhost/Unisole/views/plugins/ckeditor/ckeditor.js"></script>
 </head>
 <body>
 	<h2>Them bai viet</h2>

@@ -1,0 +1,8 @@
+.cke_wysiwyg_frame{
+	width: 100%!important;
+    height: 600px!important;
+    resize: none;
+}
+.cke_contents{
+	height: auto!important;
+}

@@ -3,7 +3,7 @@
 <head>
 	<title>Quản trị trang Unisole</title>
 	
-	<link rel="stylesheet" type="text/css" href="http://localhost/Unisole/asset/css/login-admin.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost/Unisole/asset/css/login-teacher.css">
 	<script src="http://localhost/Unisole/asset/js/jquery-3.3.1.min.js"></script>
 	<script src="http://localhost/Unisole/asset/js/Sweetalert.js"></script>
 	
@@ -39,7 +39,7 @@
 				<img src="http://localhost/Unisole/asset/image/logo.png" alt="Logo" title="Logo" width="138">
 			</div>
 			<h1 class="display1">Unisole Teacher</h1>
-			<p class="subhead">Đây là trang giành cho giảng viên Unisole chấm bài</p>
+			<p class="subhead">Trang giành cho giảng viên Unisole chấm bài</p>
 			<form action="http://localhost/Unisole/Controller-client/User_Controller.php" method="POST" class="login-form" role="form">
 				<div id="form-login-username" class="form-group">
 					<input id="username" class="form-control" name="username" type="text" size="18" alt="login" required />

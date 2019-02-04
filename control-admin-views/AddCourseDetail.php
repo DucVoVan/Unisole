@@ -1,18 +1,12 @@
 <?php 
-	session_start();
-
-	if(!isset($_SESSION['admin_id'])){
-		Header("Location: http://localhost/Unisole/views/401.php?t=admin");
-		exit();
-	}
 	require("../Create-table/connect.php");
 	$topicidchildren = $_POST['topicchildrenid'];
 	$accountid = 11;
 	if(isset($_POST['name'])){
 		$name = $_POST['name'];
 	}
-	if(isset($_POST['content-introduce'])){
-		$introduce = $_POST['content-introduce'];
+	if(isset($_POST['contentintroduce'])){
+		$introduce = $_POST['contentintroduce'];
 	}
 	if(isset($_POST['content'])){
 		$content = $_POST['content'];
@@ -23,14 +17,17 @@
 	while($row = mysqli_fetch_assoc($result)){
 		if($row['name']==$name){
 			$check = false;
-			header("Location: http://localhost/Unisole/views/AddCourseDetail.php?error=1");
 		}
-	}
+	}// Kiểm tra tên khóa học có bị trùng hay không bằng biến $check
 	if($check){
 		$sql2 = "INSERT INTO `course` (`topicidchildren`, `accountid`, `name`, `content-introduce`, `content`) VALUES ('$topicidchildren','$accountid','$name','$introduce','$content')";
-		mysqli_query($conn,$sql2);
-		
-		header("Location: http://localhost/Unisole/views/AddCourseDetail.php");
+		if(mysqli_query($conn,$sql2)){
+			echo "Thêm khóa học thành công!";
+		}else{
+			echo "Lỗi: ".mysqli_error($conn,$sql2);
+		}
+	}else{
+		echo "Khóa học bị trùng tên. Mời nhập tên khác";
 	}
 
 	

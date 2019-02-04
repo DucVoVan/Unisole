@@ -153,7 +153,9 @@ if($_SESSION['music']==true||$_SESSION['guitar']==true||$_SESSION['keyboard']==t
                 <?php echo $_SESSION['fullname']; ?>
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="http://localhost/Unisole/view-client/updateUser.php">Hồ sơ cá nhân</a>
                 <a class="dropdown-item" href="http://localhost/Unisole/view-client/pickcourse.php">Đánh giá năng lực</a>
+                <a class="dropdown-item" href="http://localhost/Unisole/view-client/Band.php">Band của bạn</a>
                 <a class="dropdown-item" href="http://localhost/Unisole/delete.php">Đăng xuất</a>
             </div>
         </div>

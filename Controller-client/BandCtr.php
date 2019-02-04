@@ -25,20 +25,21 @@
 	$question21 =  isset($_POST['question21'])? $_POST['question21']: '';
 	$topicid =  isset($_POST['topicid'])? $_POST['topicid']: '';
 	$account_id = $_SESSION['id'];
-	$sql = "SELECT `topicid` FROM `band` WHERE `accountid` = '$account_id'" ;
+	$sql = "SELECT `id` FROM `band` WHERE `accountid` = '$account_id'" ;
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_assoc($result);
 	// Kiểm tra xem người dùng đã có bản đánh giá trong CSDL hay chưa
-	if($row['topicid']==$topicid){
+	if(isset($row['id'])){
 		// Nếu có rồi thì hiện thông báo
-		echo "Bạn đã hoàn thành bản đánh giá band trước đó!";
+		echo "exits";
 	}else{
-		$sql = "INSERT INTO `band` (`accountid`,`topicid`,`question0`,`question1`,`question2`,`question3`,`question4`,`question5`,`question6`,`question7`,`question8`,`question9`,`question10`,`question11`,`question12`,`question13`,`question14`,`question15`,`question16`,`question17`,`question18`,`question19`,`question20`,`question21`) VALUES ('".$account_id."','".$topicid."','".$question0."','".$question1."','".$question2."','".$question3."','".$question4."','".$question5."','".$question6."','".$question7."','".$question8."','".$question9."','".$question10."','".$question11."','".$question12."','".$question13."','".$question14."','".$question15."','".$question16."','".$question17."','".$question18."','".$question19."','".$question20."','".$question21."')";
+		$sql = "INSERT INTO `band` (`accountid`, `status`,`question0`,`question1`,`question2`,`question3`,`question4`,`question5`,`question6`,`question7`,`question8`,`question9`,`question10`,`question11`,`question12`,`question13`,`question14`,`question15`,`question16`,`question17`,`question18`,`question19`,`question20`,`question21`) VALUES ('".$account_id."', 0,'".$question0."','".$question1."','".$question2."','".$question3."','".$question4."','".$question5."','".$question6."','".$question7."','".$question8."','".$question9."','".$question10."','".$question11."','".$question12."','".$question13."','".$question14."','".$question15."','".$question16."','".$question17."','".$question18."','".$question19."','".$question20."','".$question21."')";
 		// $result = mysqli_query($conn, $sql);
 		if(!mysqli_query( $conn, $sql )){
 			echo mysqli_error($conn);
 		}else{
-			echo "Thêm thành công!";
+			$_SESSION['band']=true;
+			echo "ok";
 		}
 	}
 	

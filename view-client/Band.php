@@ -7,7 +7,7 @@ if(!isset($_SESSION['id'])){
 }
 	// true, false xác nhận người dùng đã làm bản đánh giá năng lực này hay chưa
 if($_SESSION['band']==true){
-	echo "Bạn đã hoàn thành bản khảo sát về band nhạc của bạn!";
+	header("Location: http://localhost/Unisole/view-client/Band-edit.php");
 	exit();
 }
 $title_header = "Bảng khảo sát Band nhạc";
@@ -39,37 +39,37 @@ $title_header = "Bảng khảo sát Band nhạc";
 		<div class="qs-background">
 			<label><label class="qs">Câu hỏi 1: </label> Bạn cung cấp dịch vụ nào?<small style="color: red;">*</small></label>
 			<label class="a">
-				<input type="checkbox" name="question1" value="Ca hát" id="1">
+				<input type="checkbox" name="questionone" value="Ca hát" id="1">
 				<span class="checkmark"></span>
 				<label for="1">Ca hát</label>
 			</label>
 			<label class="a">
-				<input type="checkbox" name="question1" value="Guitar đệm hát" id="2">
+				<input type="checkbox" name="questionone" value="Guitar đệm hát" id="2">
 				<span class="checkmark"></span>
 				<label for="2">Guitar đệm hát</label>
 			</label>
 			<label class="a">
-				<input type="checkbox" name="question1" value="Guitar độc tấu" id="3">
+				<input type="checkbox" name="questionone" value="Guitar độc tấu" id="3">
 				<span class="checkmark"></span>
 				<label for="3">Guitar độc tấu</label>
 			</label>
 			<label class="a">
-				<input type="checkbox" name="question1" value="Piano đệm hát" id="4" >
+				<input type="checkbox" name="questionone" value="Piano đệm hát" id="4" >
 				<span class="checkmark"></span>
 				<label for="4">Piano đệm hát</label>
 			</label>
 			<label class="a">
-				<input type="checkbox" name="question1" value="Piano độc tấu" id="5">
+				<input type="checkbox" name="questionone" value="Piano độc tấu" id="5">
 				<span class="checkmark"></span>
 				<label for="5">Piano độc tấu</label>
 			</label>
 			<label class="a">
-				<input type="checkbox" name="question1" value="Violin độc tấu" id="6">
+				<input type="checkbox" name="questionone" value="Violin độc tấu" id="6">
 				<span class="checkmark"></span>
 				<label for="6">Violin độc tấu</label>
 			</label>
 			<label class="a">
-				<input type="checkbox" name="question1" value="" class="1" id="7">
+				<input type="checkbox" name="questionone" value="" class="1" id="7">
 				<span class="checkmark"></span>
 				<label for="7">Mục khác:</label>
 				<div class="effect-area">
@@ -227,7 +227,6 @@ $title_header = "Bảng khảo sát Band nhạc";
 			</div>
 		</div>
 
-		<div style="height: 10px;"></div>
 		<div class="qs-background">
 			<label><label class="qs">Câu hỏi 8: </label> Đối với Nhạc công đệm hát hoặc độc tấu đơn lẻ, mức thù lao bạn đề xuất là bao nhiêu? (Giả sử rằng nơi biểu diễn cách nơi bạn ở dưới 15km, trong một chương trình quy mô rất ít người, tại quán cafe hoặc phòng trà, nơi công cộng, chơi khoảng 5 bài)</label>
 			<div class="effect-area">
@@ -253,6 +252,7 @@ $title_header = "Bảng khảo sát Band nhạc";
 		</div>
 
 		<input type="hidden" name="question0" value="">
+
 		<div class="submit">
 			<input type="submit" name="submit" value="Hoàn thành"  class="btn btn-primary" style="margin-top: 10px;">
 		</div>

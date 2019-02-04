@@ -15,7 +15,7 @@
 	<link rel='stylesheet' id='bootstrap-css-css'  href='http://localhost/Unisole/asset/css/bootstrap.min.css' type='text/css' media='all' />
 	<link rel="stylesheet" type="text/css" href="http://localhost/Unisole/asset/css/custom-admin.css">
 	<link rel="stylesheet" type="text/css" href="http://localhost/Unisole/asset/css/custom-guitar.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="http://localhost/Unisole/asset/css/fontawesome-all.min.css">
 	<link rel="stylesheet" href="http://localhost/Unisole/asset/css/bootstrap-datepicker.css" />
 
 	<script src="http://localhost/Unisole/asset/js/datatables.min.js"></script>

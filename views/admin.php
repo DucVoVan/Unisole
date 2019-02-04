@@ -11,17 +11,19 @@
 	<title></title>
 	<meta charset="utf-8">
 
-	<script src="http://localhost/Unisole/asset/js/jquery-3.3.1.min.js"></script>
 	<link rel='stylesheet' id='bootstrap-css-css'  href='http://localhost/Unisole/asset/css/bootstrap.min.css' type='text/css' media='all' />
 	<link rel="stylesheet" type="text/css" href="http://localhost/Unisole/asset/css/custom-admin.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="http://localhost/Unisole/asset/css/addcoursedetail.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost/Unisole/asset/css/fontawesome-all.min.css">
 
+	<script src="http://localhost/Unisole/asset/js/jquery-3.3.1.min.js"></script>
 	<script src="http://localhost/Unisole/asset/js/datatables.min.js"></script>
 	<script src="http://localhost/Unisole/asset/js/dataTables.bootstrap4.min.js"></script>
 	<script src="http://localhost/Unisole/asset/js/jquery.popupoverlay.js"></script>
 	<script src="http://localhost/Unisole/asset/js/bootstrap.min.js"></script>
 	<script src="http://localhost/Unisole/asset/js/main.js" async></script>
 	<script src="http://localhost/Unisole/asset/js/Sweetalert.js" async></script>
+	<script src="http://localhost/Unisole/views/plugins/ckeditor/ckeditor.js"></script>
 </head>
 <body>
 	<div id="fadeandscale" class="well">
@@ -81,36 +83,36 @@
 			<input type="button" class="my_popup_close2 btn btn-info" value="Đóng" />
 		</form>
 	</div>
-	<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-		<li class="nav-item">
-			<a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Tạo các chủ đề con</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link " id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Quản lý User</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact1" role="tab" aria-controls="pills-contact" aria-selected="false">Quản lý giảng viên</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Thêm một khóa học mới</a>
-		</li>
-	</ul>
-	<div class="tab-content" id="pills-tabContent">
-		<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-			<?php include("AddTopicChildren.php"); ?>
+	<div class="admin">
+		<div class="admin-left">
+			<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+					<h6>Xin chào, Admin</h6>
+					<a class="add-nav-link nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Tạo các chủ đề con</a>
+					<a class="add-nav-link nav-link " id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Quản lý User</a>
+					<a class="add-nav-link nav-link" id="pills-contact-tab" data-toggle="pill" href="#v-pills-contact1" role="tab" aria-controls="v-pills-contact" aria-selected="false">Quản lý giảng viên</a>
+					<a class="add-nav-link nav-link" id="v-pills-contact-tab" data-toggle="pill" href="#v-pills-contact2" role="tab" aria-controls="v-pills-contact2" aria-selected="false">Thêm một khóa học mới</a>
+			</div>
 		</div>
-		<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-			<?php include("ManagerUser.php"); ?>
-		</div>
-		<div class="tab-pane fade" id="pills-contact1" role="tabpanel" aria-labelledby="pills-contact-tab">
-			<?php include("ManagerUserTeacher.php"); ?>
-		</div>
-		<div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-			<?php include("AddCourse.php"); ?>
+		
+		<div class="admin-right">
+			<div class="tab-content" id="v-pills-tabContent">
+				<div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+					<?php include("AddTopicChildren.php"); ?>
+				</div>
+				<div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+					<?php include("ManagerUser.php"); ?>
+				</div>
+				<div class="tab-pane fade" id="v-pills-contact1" role="tabpanel" aria-labelledby="v-pills-contact-tab">
+					<?php include("ManagerUserTeacher.php"); ?>
+				</div>
+				<div class="tab-pane fade" id="v-pills-contact2" role="tabpanel" aria-labelledby="v-pills-contact-tab2">
+					<?php include("AdminCourse.php"); ?>
+				</div>
+			</div>
 		</div>
 	</div>
-
 </body>
 </html>
 <script src="http://localhost/Unisole/asset/js/table-user.js"></script>
 <script src="http://localhost/Unisole/asset/js/table-user-teacher.js"></script>
+<script src="http://localhost/Unisole/asset/js/add-course.js"></script>

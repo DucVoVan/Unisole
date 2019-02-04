@@ -88,7 +88,9 @@ Mời bạn lựa chọn theo các phím chức năng sau:
                                         </button>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                             <a class="dropdown-item" href="http://localhost/Unisole/view-client/User.php">Trang cá nhân</a>
+                                            <a class="dropdown-item" href="http://localhost/Unisole/view-client/updateUser.php">Hồ sơ cá nhân</a>
                                             <a class="dropdown-item" href="http://localhost/Unisole/view-client/pickcourse.php">Đánh giá năng lực</a>
+                                            <a class="dropdown-item" href="http://localhost/Unisole/view-client/Band.php">Band của bạn</a>
                                             <a class="dropdown-item" href="http://localhost/Unisole/delete.php">Đăng xuất</a>
                                         </div>
                                     </div>

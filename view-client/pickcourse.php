@@ -19,12 +19,8 @@ if($_SESSION['keyboard']==true){
 }else{
 	$keyboard = "http://localhost/Unisole/view-client/Teachkeyboard.php";
 }
-if($_SESSION['band']==true){
-	$band = "#";
-}else{
-	$band = "http://localhost/Unisole/view-client/Band.php";
-}
-if($_SESSION['music']==true||$_SESSION['guitar']==true||$_SESSION['keyboard']==true||$_SESSION['band']==true){
+
+if($_SESSION['music']==true||$_SESSION['guitar']==true||$_SESSION['keyboard']==true){
 	$redirect_user = true;
 }else{
 	$redirect_user = false;
@@ -71,16 +67,7 @@ if($_SESSION['music']==true||$_SESSION['guitar']==true||$_SESSION['keyboard']==t
 					</tr>
 				</table>
 			</div>
-			<div class="part2">
-				<h3>Mời bạn tham gia vào nhóm band nhạc của Unisole</h3>
-				<table>
-					<tr>
-						<th>
-							<a class="band" href="<?php echo $band; ?>">Band nhạc</a>
-						</th>
-					</tr>
-				</table>
-			</div>
+			
 			<div class="part3">
 				<h3>Mời bạn tham gia vào nhóm hội chị em của Unisole</h3>
 				<table>
@@ -107,7 +94,7 @@ if($_SESSION['music']==true||$_SESSION['guitar']==true||$_SESSION['keyboard']==t
 		var music = "<?php echo $music; ?>";
 		var guitar = "<?php echo $guitar; ?>";
 		var keyboard = "<?php echo $keyboard; ?>";
-		var band = "<?php echo $band; ?>";
+
 		$('.music').click(function(){
 			if (music=="#"){
 				swal({
@@ -141,17 +128,7 @@ if($_SESSION['music']==true||$_SESSION['guitar']==true||$_SESSION['keyboard']==t
 				});
 			}	
 		});
-		$('.band').click(function(){
-			if (band=="#"){
-				swal({
-					title: "Thông báo!",
-					text: "Bạn đã hoàn thành bản đánh giá năng lực với chủ đề band này!",
-					type: "info",
-					confirmButtonText: 'OK',
-					timer: 10000
-				});
-			}	
-		});
+		
 	</script>
 </body>
 </html>

@@ -1,0 +1,298 @@
+html,body{
+  height: 100%;
+}
+div.show{
+  color: red;
+  opacity: 0;
+  margin: 0 auto;
+  width: 1140px;
+}
+h1.a,h1.b,h1.c{
+  cursor: pointer;
+  margin: 0;
+  text-align: center;
+}
+
+.container,.row{
+  height: auto;
+}
+
+.alert-pick{
+  margin: 0 auto;
+  width: 50%;
+  display: block;
+}
+.conn-1, .conn-2, .conn-3{
+  display: flex;
+}
+.conn-1-1, .conn-2-1, .conn-3-1{
+  max-width: 30%;
+  flex-basis: 30%;
+  border: 1px solid blue;
+}
+.conn-1-2, .conn-2-2, .conn-3-2{
+  max-width: 70%;
+  flex-basis: 70%;
+  border: 1px solid blue;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  width: 13%;
+}
+th{
+  font-weight: 400;
+}
+td{
+  font-weight: 300;
+}
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+tr:nth-child(odd) {
+  background-color: rgba(0,0,0,.05);
+}
+body{
+  margin: 0 auto;
+  width: 1300px;
+  background: linear-gradient(135deg, rgba(85,239,203,1) 0%,rgba(30,87,153,1) 0%,rgba(85,239,203,1) 0%,rgba(91,202,255,1) 100%);
+  color: #4e4545;
+}
+
+.alert-pick{
+  height: 100%;
+  margin: 0 0 0 20%;
+  font-weight: 500;
+  color: #ff4411;
+  text-transform: uppercase;
+}
+tr:hover {
+  background-color: #dcdcdc!important;
+}
+
+.select {
+  margin-top: 5%;
+}
+
+a:hover {
+  text-decoration: none;
+  }html,body{
+    height: 100%;
+  }
+  div.show{
+    color: red;
+    opacity: 0;
+    margin: 0 auto;
+    width: 1140px;
+  }
+  h1.a,h1.b,h1.c{
+    cursor: pointer;
+    margin: 0;
+    text-align: center;
+  }
+
+  .container,.row{
+    height: auto;
+  }
+
+  .alert-pick{
+    margin: 0 auto;
+    width: 50%;
+    display: block;
+    text-align: center;
+  }
+  .conn-1, .conn-2, .conn-3{
+    display: flex;
+  }
+  .conn-1-1, .conn-2-1, .conn-3-1{
+    max-width: 30%;
+    flex-basis: 30%;
+    border: 1px solid blue;
+  }
+  .conn-1-2, .conn-2-2, .conn-3-2{
+    max-width: 70%;
+    flex-basis: 70%;
+    border: 1px solid blue;
+  }
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    width: 13%;
+  }
+  th{
+    font-weight: 400;
+  }
+  td{
+    font-weight: 300;
+  }
+  tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+  tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+  
+  body{
+    margin: 0 auto;
+    width: 1300px;
+    background: linear-gradient(135deg, rgba(85,239,203,1) 0%,rgba(30,87,153,1) 0%,rgba(85,239,203,1) 0%,rgba(91,202,255,1) 100%);
+    color: #4e4545;
+  }
+
+
+  tr:hover {
+    background-color: #dcdcdc!important;
+  }
+
+  .select {
+    margin-top: 5%;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+  .part1, .part2, .part3{
+    padding-top: 3%;
+    padding-bottom: 3%;
+  }
+  table tr td a, table tr th a{
+    display: block;
+    padding: 8px;
+  }
+  *:focus {
+    outline: none;
+  }
+  input[type="text"],input[type="email"],input[type="fullname"],
+  input[type="password"] {
+    display: block;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    padding: 4px;
+    width: 220px;
+    height: 32px;
+    border: none;
+    border-bottom: 1px solid #AAA;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    transition: 0.2s ease;
+  }
+
+  input[type="text"]:focus,input[type="email"]:focus,
+  input[type="password"]:focus {
+    border-bottom: 2px solid #16a085;
+    color: #16a085;
+    transition: 0.2s ease;
+  }
+
+  input[type="submit"] {
+    margin-top: 28px;
+    width: 120px;
+    height: 32px;
+    background: #365899;
+    border: none;
+    border-radius: 2px;
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: 0.1s ease;
+    cursor: pointer;
+  }
+
+  input[type="submit"]:hover,
+  input[type="submit"]:focus {
+    opacity: 0.8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    transition: 0.1s ease;
+  }
+
+  input[type="submit"]:active {
+    opacity: 1;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    transition: 0.1s ease;
+  }
+  .updateUser{
+    display: flex;
+  }
+  .updateUser1{
+    max-width: 50%;
+    flex-basis: 50%;
+    border-right: 1px solid #f1f1f1;
+  }
+  .updateUser2{
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .alert-password{
+    color: red;
+  }
+  input[type="file"]{
+  display: none;
+}
+#dropZone{
+  padding: 10px;
+}
+
+.choose-file{
+  flex: 1 1 auto;
+  margin: 0px;
+  padding: 10px;
+  border: 2px solid #f7f7f7;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  overflow:hidden;
+  transition: .3s;
+  color: #f7f7f7;
+  display: inline-block;
+}
+.choose-file:after{
+  height: 120%;
+  left: -10%;
+  /*transform: skewX(15deg);*/
+  z-index: -1;
+  position: absolute;
+  transition: .3s;
+  content: '';
+  width: 0;
+  /*left: 50%;*/
+  bottom: 0;
+  /*height: 3px;*/
+  background: #f7f7f7;
+}
+.choose-file:hover{
+  color: #5bcaff;
+  cursor: pointer;
+}
+.choose-file:hover:after{
+  left: -10%;
+  width: 120%;
+  transform: skewX(15deg);
+  z-index: -1;
+}
+h1 {
+    color: #ff4411;
+}
+.image-user{
+  width: 300px;
+  height: auto;
+}
+
+#passwordchange, #passwordchangecheck{
+  display: inline-block;
+}

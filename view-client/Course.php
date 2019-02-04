@@ -15,6 +15,7 @@
 	<meta charset="utf-8">
 	<link rel='stylesheet' id='bootstrap-css-css'  href='http://localhost/Unisole/asset/css/bootstrap.min.css' type='text/css' media='all' />
 	<link rel="stylesheet" type="text/css" href="http://localhost/Unisole/asset/css/music-css.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost/Unisole/asset/css/Course.css">
 	<script src="http://localhost/Unisole/asset/js/jquery-3.3.1.min.js"></script>
 	<script src="http://localhost/Unisole/asset/js/Sweetalert.js"></script>
 
