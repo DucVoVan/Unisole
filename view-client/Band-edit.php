@@ -129,6 +129,7 @@
 			</label>
 		</div>
 		<div id="files"></div>
+		<div id="error"></div>
 		<div id="progress"></div>
 	</div>
 	<form action="" method="POST" id="myForm">

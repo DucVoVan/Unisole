@@ -1,3 +1,9 @@
+<?php 
+	if(!isset($_SESSION['admin_id'])){
+		Header("Location: http://localhost/Unisole/views/401.php?t=admin");
+		exit();
+	}
+?>
 <form action="http://localhost/Unisole/control-admin-views/AddTopicChildren.php" method="POST" class="form-add-topic">
 				<label for="topic">Chọn các chủ đề: </label></br>
 				<select id="topic" class="form-control topic-select">

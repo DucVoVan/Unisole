@@ -88,9 +88,10 @@
 			<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
 					<h6>Xin chào, Admin</h6>
 					<a class="add-nav-link nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Tạo các chủ đề con</a>
-					<a class="add-nav-link nav-link " id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Quản lý User</a>
-					<a class="add-nav-link nav-link" id="pills-contact-tab" data-toggle="pill" href="#v-pills-contact1" role="tab" aria-controls="v-pills-contact" aria-selected="false">Quản lý giảng viên</a>
-					<a class="add-nav-link nav-link" id="v-pills-contact-tab" data-toggle="pill" href="#v-pills-contact2" role="tab" aria-controls="v-pills-contact2" aria-selected="false">Thêm một khóa học mới</a>
+					<a class="add-nav-link nav-link " id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Quản lý Thành viên</a>
+					<a class="add-nav-link nav-link" id="pills-contact-tab" data-toggle="pill" href="#v-pills-contact1" role="tab" aria-controls="v-pills-contact" aria-selected="false">Quản lý Giảng viên</a>
+					<a class="add-nav-link nav-link" id="v-pills-contact2-tab" data-toggle="pill" href="#v-pills-contact2" role="tab" aria-controls="v-pills-contact2" aria-selected="false">Quản lý Khóa học</a>
+					<a class="add-nav-link nav-link" id="v-pills-contact3-tab" data-toggle="pill" href="#v-pills-contact3" role="tab" aria-controls="v-pills-contact3" aria-selected="false">Quản lý Band nhạc</a>
 			</div>
 		</div>
 		
@@ -107,6 +108,9 @@
 				</div>
 				<div class="tab-pane fade" id="v-pills-contact2" role="tabpanel" aria-labelledby="v-pills-contact-tab2">
 					<?php include("AdminCourse.php"); ?>
+				</div>
+				<div class="tab-pane fade" id="v-pills-contact3" role="tabpanel" aria-labelledby="v-pills-contact-tab3">
+					<?php include("AdminBand.php"); ?>
 				</div>
 			</div>
 		</div>

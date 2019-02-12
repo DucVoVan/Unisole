@@ -1,10 +1,4 @@
 <?php 
-	// echo $_POST['question1'];
-	// echo $_POST['question2'];
-	// echo $_POST['question3'];
-	// echo $_POST['question5'];
-	// echo $_POST['question6'];
-	// echo $_POST['question7'];
 
     if (isset($_FILES['attachments'])) {
         $msg = "";
@@ -16,7 +10,5 @@
 
         exit(json_encode($msg));
         
-        // echo "<pre>";
-        // var_dump($_FILES);
     }
 ?>

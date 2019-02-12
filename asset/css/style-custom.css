@@ -3,6 +3,7 @@ body {
     color: #929292;
     font-size: 14px;
     margin: 0px;
+    background-color: #e9ebee;
 }
 .result{
     opacity: 1;
@@ -184,7 +185,6 @@ input{
 }
 input:focus{
     outline-offset: 0px!important;
-    border: none!important;
     outline: 0px!important;
 }
 .avatar img{
@@ -264,4 +264,25 @@ h2{
 h3{
         color: #ff4411;
         margin: 8px 0;
+}
+.chat-messenger{
+    width: 30%;
+    border: 1px solid #f1f1f1;
+}
+.content-chat{
+    height: 300px;
+    background-color: white;
+    border: 1px solid #f1f1f1;
+}
+h5{
+    color: black;
+    font-weight: 600;
+    font-size: 22px;
+    border: 1px solid #f1f1f1;
+    background-color: white;
+    margin: 0;
+}
+.chat{
+    height: 30px;
+    border: 1px solid #f1f1f1;
 }

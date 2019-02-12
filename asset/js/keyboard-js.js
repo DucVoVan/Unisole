@@ -14,8 +14,8 @@
 
 				if (!fileTypeAllowed.test(fileName))
 				    $("#files").html('Chỉ được upload file với định dạng mp3!');
-				// else if (fileSize > 500000)
-				//     $("#error").html('Your file is too big! Max allowed size is: 500KB');
+				else if (fileSize > 500000)
+				    $("#error").html('Chỉ được upload file có dung lượng tối đa 5MB');
 				else {
 				   $("#files").html("");
 				   data.submit();

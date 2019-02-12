@@ -21,21 +21,23 @@ if($_SESSION['music']==true||$_SESSION['guitar']==true||$_SESSION['keyboard']==t
 <!DOCTYPE html>
 <html>
 <head>
- <title>Trang cá nhân</title>
- <meta charset="utf-8">
- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
- <meta name="mobile-web-app-capable" content="yes">
- <meta name="apple-mobile-web-app-capable" content="yes">
- <link rel="stylesheet" id="bootstrap-css-css" href="http://localhost/Unisole/asset/css/bootstrap.min.css" type="text/css" media="all">
- <link rel="stylesheet" id="custom-css-css" href="http://localhost/Unisole/asset/css/style-custom.css" type="text/css" media="all">
- <script src="http://localhost/Unisole/asset/js/jquery-3.3.1.min.js"></script>
- <script src="http://localhost/Unisole/asset/js/main-index.js" async></script>
- <script src="http://localhost/Unisole/asset/js/popper.min.js" async></script>
- <script src="http://localhost/Unisole/asset/js/bootstrap.min.js" async></script>
- <script src="http://localhost/Unisole/asset/js/Sweetalert.js" async></script>
+   <title>Trang cá nhân</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <meta name="mobile-web-app-capable" content="yes">
+   <meta name="apple-mobile-web-app-capable" content="yes">
+   <link rel="stylesheet" id="bootstrap-css-css" href="http://localhost/Unisole/asset/css/bootstrap.min.css" type="text/css" media="all">
+   <link rel="stylesheet" id="custom-css-css" href="http://localhost/Unisole/asset/css/style-custom.css" type="text/css" media="all">
+   <script src="http://localhost/Unisole/asset/js/jquery-3.3.1.min.js"></script>
+   <script src="http://localhost/Unisole/asset/js/main-index.js" async></script>
+   <script src="http://localhost/Unisole/asset/js/popper.min.js" async></script>
+   <script src="http://localhost/Unisole/asset/js/bootstrap.min.js" async></script>
+   <script src="http://localhost/Unisole/asset/js/Sweetalert.js" async></script>
+   <script src="http://localhost/Unisole/asset/js/socket.io.js"></script>
+
 </head>
 <body>
- <div class="container">
+   <div class="container">
     <div class="row">
         <div class="home-left col-xl-3 col-lg-3">
             <div class="site-logo">
@@ -51,102 +53,34 @@ if($_SESSION['music']==true||$_SESSION['guitar']==true||$_SESSION['keyboard']==t
         </div>
 
         <div class="home-between col-xl-6 col-lg-6">
-          <div class="mark-point">
-            <?php 
-            $rd = new RenderCodeTable();
-            if($_SESSION['music']==true){
-                if(empty($arr_music)){
-                    echo "<h3>Bảng điểm Thanh nhạc của bạn đang được chấm</h3>";
-                }else{
-                    echo '<h2>Bảng điểm Chuyên mục Thanh nhạc</h2>';
-                    echo '<table> <tr> <th>STT</th> <th class="1-music" style="width:20%";>Nội dung chính</th> <th class="2-music" style="width:40%;">Chi tiết</th> <th>Số điểm hiện tại</th> <th>Số điểm cần đạt</th> <th class="3-music" style="width:20%;">Ghi chú thêm</th> </tr>';
-                    $tc = new TopicChildren(1);
-                    $arr_idtopicchild = $tc->getIdTopicChildren();
-                    $arr_nametopicchild = $tc->getNameTopicChildren();
-                    $arr_start = array(1,4,7,15,22,30);
-                    $arr_end = array(3,6,14,21,28,31);
-                    for($i=0; $i<count($arr_idtopicchild);$i++){
-                        $rd->render($arr_nametopicchild[$i],$arr_idtopicchild[$i],$arr_start[$i],$arr_end[$i],$arr_details_music,$arr_music);
-                    }
-                    // $rd->render('Hơi',1,3,$arr_details_music,$arr_music);
-                    // $rd->render('Thanh quản',4,6,$arr_details_music,$arr_music);
-                    // $rd->render('Âm sắc',7,14,$arr_details_music,$arr_music);
-                    // $rd->render('Cảm thụ',15,21,$arr_details_music,$arr_music);
-                    // $rd->render('Kỹ thuật DB',22,28,$arr_details_music,$arr_music);
-                    // $rd->render('Các yêu cầu đặc biệt',30,31,$arr_details_music,$arr_music);
-                    echo "</table>";
-                }
-            }
+            <div class="mark-point">
+                <?php include("showMarkPoint.php"); ?>
+            </div>
+            <div class="chatbot-child">
+                <div class="chatbot">
+                    <div id="result1">
 
-            if($_SESSION['guitar']==true){//Nếu đã làm bản đánh giá
-                if(empty($arr_guitar)){
-                    echo "<h3>Bảng điểm Guitar của bạn đang được chấm</h3>";
-                }else{
-                    echo '<h2>Bảng điểm Chuyên mục Guitar</h2>';
-                    echo '<table> <tr> <th>STT</th> <th class="1-guitar" style="width:20%;">Nội dung chính</th> <th class="2-guitar" style="width:40%;">Chi tiết</th> <th>Số điểm hiện tại</th> <th>Số điểm cần đạt</th> <th class="3-guitar" style="width:20%;">Ghi chú thêm</th> </tr>';
-                    $tc = new TopicChildren(2);
-                    $arr_idtopicchild = $tc->getIdTopicChildren();
-                    $arr_nametopicchild = $tc->getNameTopicChildren();
-                    $arr_start = array(1,5,9,12,15,18,22);
-                    $arr_end = array(4,8,11,14,17,21,23);
-                    for($i=0; $i<count($arr_idtopicchild);$i++){
-                        $rd->render($arr_nametopicchild[$i],$arr_idtopicchild[$i],$arr_start[$i],$arr_end[$i],$arr_details_guitar,$arr_guitar);
-                    }
-                    echo "</table>";
-                }
-            }
+                    </div>
 
+                    <div class="chatbot-title">
+                        Chat Bot
+                    </div>
+                    <div id="messages">
+                        <pre>
+                            Mời bạn lựa chọn theo các phím chức năng sau: 
+                            1.abc
+                            2.xyz
+                            3.def
+                        </pre>
+                    </div>
 
-            if($_SESSION['keyboard']==true){
-                if(empty($arr_keyboard)){
-                    echo "<h3>Bảng điểm Keyboard của bạn đang được chấm</h3>";
-                }else{
-                    echo '<h2>Bảng điểm Chuyên mục Keyboard</h2>';
-                    echo '<table> <tr> <th>STT</th> <th class="1-keyboard" style="width:20%;">Nội dung chính</th> <th class="2-keyboard" style="width:40%;">Chi tiết</th> <th>Số điểm hiện tại</th> <th>Số điểm cần đạt</th> <th class="3-keybord" style="width:20%;">Ghi chú thêm</th> </tr>';
-                    $tc = new TopicChildren(3);
-                    $arr_idtopicchild = $tc->getIdTopicChildren();
-                    $arr_nametopicchild = $tc->getNameTopicChildren();
-                    $arr_start = array(1,4,6,9,12,15,19);
-                    $arr_end = array(3,5,8,11,14,18,20);
-                    for($i=0; $i<count($arr_idtopicchild);$i++){
-                        $rd->render($arr_nametopicchild[$i],$arr_idtopicchild[$i],$arr_start[$i],$arr_end[$i],$arr_details_keyboard,$arr_keyboard);
-                    }
-                    // $rd->render('Tay trái',1,3,$arr_details_keyboard,$arr_keyboard);
-                    // $rd->render('Tay phải',4,5,$arr_details_keyboard,$arr_keyboard);
-                    // $rd->render('Chơi melody',6,8,$arr_details_keyboard,$arr_keyboard);
-                    // $rd->render('Đọc bản nhạc',9,11,$arr_details_keyboard,$arr_keyboard);
-                    // $rd->render('Cảm âm',12,14,$arr_details_keyboard,$arr_keyboard);
-                    // $rd->render('Sử dụng công cụ hỗ trợ',15,18,$arr_details_keyboard,$arr_keyboard);
-                    // $rd->render('Các yêu cầu đặc biệt',19,20,$arr_details_keyboard,$arr_keyboard);
-                    echo '</table>';
-                }
-            }
-            ?>
-
-
-        </div>
-        <div class="chatbot-child">
-            <div class="chatbot">
-                <div id="result1">
-
+                    <input type="text" value="" value="" id="number" placeholder="Nhập tin nhắn ..."/>
                 </div>
-
-                <div class="chatbot-title">
-                    Chat Bot
-                </div>
-                <div id="messages">
-                    <pre>
-                        Mời bạn lựa chọn theo các phím chức năng sau: 
-                        1.abc
-                        2.xyz
-                        3.def
-                    </pre>
-                </div>
-
-                <input type="text" value="" value="" id="number" placeholder="Nhập tin nhắn ..."/>
+            </div>
+            <div class="chat-messenger">
+                
             </div>
         </div>
-    </div>
     <div class="home-right col-xl-3 col-lg-3">
         <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -162,13 +96,107 @@ if($_SESSION['music']==true||$_SESSION['guitar']==true||$_SESSION['keyboard']==t
         <div class="Course-registered">
             <h2>Các khóa học đang tham gia</h2>
             <?php 
-                $cr = new CourseRegistered();
-                $cr->ShowCourseRegistered($_SESSION['id']);
+            $cr = new CourseRegistered();
+            $cr->ShowCourseRegistered($_SESSION['id']);
             ?>
+            <div class="list-user-online">
+                
+            </div>
+            <script type="text/javascript">
+                var socket = io("http://localhost:3000");
+                var username = "<?php echo $_SESSION['fullname']; ?>";
+
+                socket.emit("user-name", username);
+                socket.on("list-user-online", function(manghienthi){
+                    $(".list-user-online").html('');
+                    manghienthi.map(function(r){
+                        $(".list-user-online").append('<h4 class="user-online">'+r+'</h4>');
+                    });
+
+                    $(document).ready(function(){
+                        function ignoreSpaces(string) {
+                            var temp = "";
+                            string = '' + string;
+                            splitstring = string.split(" ");
+                            for(i = 0; i < splitstring.length; i++)
+                                temp += splitstring[i];
+                            return temp;
+                        }
+                        var count = 0;
+                        $(".user-online").each(function(){
+                            var idd = "<?php echo preg_replace('/\s+/', '', $_SESSION['fullname']); ?>" + ignoreSpaces($(this).text()) + "-" + String(count);
+                            count++;
+                            var idh = idd + "h5";
+                            var chat = idd + "chat";
+                            var content_chat = idd + "content_chat";
+                            var dem = 0;
+                            var mang = [];
+                            mang.push(idd);
+                            mang.push(idh);
+                            mang.push(chat);
+                            mang.push(content_chat);
+                            mang.push("<?php echo preg_replace('/\s+/', '', $_SESSION['fullname']); ?>");
+                            $(this).click(function(){
+                                mang.push($(this).text());
+                                socket.emit('chat-user',mang);
+                                if(dem==0){
+                                    $('.chat-messenger').append('<div id="'+idd+'"  style="display:none;"><h5 id="'+idh+'"></h5> <div class="'+content_chat+'"> </div> <input id="'+chat+'" type="text" name="" placeholder="Nhập tin nhắn..."></div>');
+                                    $('.chat-messenger > div').css("display","block");
+                                    $('#'+idh).text($(this).text());
+                                }
+                                dem++;
+                               
+                                $('#'+chat).keypress(function(event){
+                                    var keycode = (event.keyCode ? event.keyCode : event.which);
+                                    if(keycode == '13'){
+                                        socket.emit("content-chat",$(this).val());
+                                        $(this).val(''); 
+                                    }
+                                });
+                                // socket.on("server-chat",function(data){
+                                //     $('.'+content_chat).append('<p>'+data+'</p>');
+                                // });
+                            });
+                        });
+                    });
+
+                });
+                
+                socket.on("create-box-chat",function(data){
+                    var idd = data[0];
+                    var idh = data[1];
+                    var chat = data[2];
+                    var content_chat = data[3];
+                    var mang = [];
+                    $('.chat-messenger').append('<div id="'+idd+'"  style="display:none;"><h5 id="'+idh+'">'+data[4]+'</h5><div class="'+content_chat+'"> </div> <input id="'+chat+'" type="text" name="" placeholder="Nhập tin nhắn..."></div>');
+                    var phong = data[6];
+                    $('#'+chat).keypress(function(event){
+                        var keycode = (event.keyCode ? event.keyCode : event.which);
+                        if(keycode == '13'){
+                            mang.push($(this).val());
+                            mang.push(content_chat);
+                            mang.push(phong);
+                            $(this).val('');
+                            socket.emit("content-chat2",mang);
+                        }
+                    });
+                });
+
+                socket.on("server-chat",function(data){
+                    $('.chat-messenger > div').css("display","block");
+                    $('.'+data[1]).append('<p>'+data[0]+'</p>');
+                });
+
+                socket.on("server-chat2",function(data){
+                    $('.chat-messenger > div').css("display","block");
+                    $('.'+data[1]).append('<p>'+data[0]+'</p>');
+                });
+
+            </script>
         </div>
 
     </div>
-</div>
+ </div>
 </div>
 </body>
 </html>

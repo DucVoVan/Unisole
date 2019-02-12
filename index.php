@@ -26,6 +26,7 @@
     <script src="http://localhost/Unisole/asset/js/Sweetalert.js"></script>
     <script src="http://localhost/Unisole/asset/js/popper.min.js" async></script>
     <script src="http://localhost/Unisole/asset/js/bootstrap.min.js" async></script>
+    
 </head>
 <body>
         <div class="container">

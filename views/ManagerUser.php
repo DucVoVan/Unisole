@@ -1,3 +1,9 @@
+<?php 
+	if(!isset($_SESSION['admin_id'])){
+		Header("Location: http://localhost/Unisole/views/401.php?t=admin");
+		exit();
+	}
+?>
 <div class="container box">
 	<div class="table-responsive">
 		<br />
